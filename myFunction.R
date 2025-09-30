@@ -1,7 +1,7 @@
-# ---------- helpers ----------
+
 manhattan <- function(x1,y1,x2,y2) abs(x1-x2) + abs(y1-y2)
 
-# next-move codes to keep things explicit
+
 DIRS <- list(U=8, D=2, L=4, R=6, S=5)
 
 # neighbors and costs from a node (x,y)
@@ -66,6 +66,7 @@ astar_first_move <- function(start, goal, roads) {
   } else {
     idx <- which(packages[,5] == 0)
     if (length(idx) == 0) return(list(x = car$x, y = car$y))  # nothing to do
+    
     # nearest by Manhattan distance
     d <- abs(packages[idx,1] - car$x) + abs(packages[idx,2] - car$y)
     k <- idx[which.min(d)]
@@ -73,7 +74,7 @@ astar_first_move <- function(start, goal, roads) {
   }
 }
 
-# ---------- your controller (must be named exactly 'myFunction') ----------
+
 myFunction <- function(roads, car, packages) {
   goal <- .choose_target(car, packages)
   move <- astar_first_move(list(x=car$x, y=car$y), goal, roads)
@@ -81,3 +82,4 @@ myFunction <- function(roads, car, packages) {
   car$mem <- list()  # not used for this assignment
   return(car)
 }
+
