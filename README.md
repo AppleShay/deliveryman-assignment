@@ -65,7 +65,8 @@ The function must return the `car` object with `car$nextMove` set to one of:
 
 ## 📊 Performance
 Using `testDM(myFunction, n=500, verbose=1)`, my solution achieved:
-- **Mean score:** ~171 turns (requirement ≤ 180 ✅)  
+- **Mean score:** ~171 turns (requirement ≤ 180 ✅)
+- **Std Dev:** ~38 (requirement ≤ 39 ✅)
 - **Runtime:** ~33 seconds for 500 games (requirement ≤ 250s ✅)
 
 This comfortably passes the grading threshold.
