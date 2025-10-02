@@ -77,6 +77,6 @@ This comfortably passes the grading threshold.
 In RStudio:
 
 ```r
-source("myFunction.R")
+source("myFunction.R") # Or click the source button on the top right of the script DE
 runDeliveryMan(myFunction, doPlot=TRUE)   # Visualize one game
 testDM(myFunction, verbose=1)             # Evaluate on 500 games
